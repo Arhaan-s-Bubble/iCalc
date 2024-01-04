@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var display: UILabel!
     
     var str: String = ""
-    var result: Int = 0
+    var result: Double = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,13 @@ class ViewController: UIViewController {
         }else if sender.currentTitle == "÷"{
             str += "/"
         }else{
-            str += (sender.currentTitle!)
+            str += sender.currentTitle!
+//            if (sender.currentTitle!.contains(".")){
+//                str += sender.currentTitle!
+//            }else{
+//                str += (sender.currentTitle! + ".0")
+//            }
+            
         }
         
         displayMe(s: sender.currentTitle!)
@@ -41,10 +47,11 @@ class ViewController: UIViewController {
     }
     @IBAction func equalTo(_ sender: UIButton) {
         // Using the Foundation API and NSExpression class
-        func evaluateExpression(_ expression: String) -> Double? {
+        func evaluateExpression(_ expression: String) -> NSDecimalNumber? {
             let mathExpression = NSExpression(format: expression)
             
-            if let result = mathExpression.expressionValue(with: nil, context: nil) as? Double {
+            if let result = mathExpression.expressionValue(with: nil, context: nil) as? NSDecimalNumber {
+                str = result.stringValue
                 return result
             } else {
                 print("Error evaluating expression")
@@ -54,7 +61,7 @@ class ViewController: UIViewController {
         
         if let result = evaluateExpression(str) {
             print("Result: \(result)")
-            display.text = String(result)
+            display.text = result.stringValue
         } else {
             print("Failed to evaluate expression")
         }
