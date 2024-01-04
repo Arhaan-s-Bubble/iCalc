@@ -1,13 +1,8 @@
 //
 //  ViewController.swift
-//  Calculator Layout iOS13
-//
-//  Created by Angela Yu on 01/07/2019.
-//  Copyright © 2019 The App Brewery. All rights reserved.
-//
 
 import UIKit
-import Foundation
+import Expression
 
 class ViewController: UIViewController {
     
@@ -47,21 +42,32 @@ class ViewController: UIViewController {
     }
     @IBAction func equalTo(_ sender: UIButton) {
         // Using the Foundation API and NSExpression class
-        func evaluateExpression(_ expression: String) -> NSDecimalNumber? {
-            let mathExpression = NSExpression(format: expression)
-            
-            if let result = mathExpression.expressionValue(with: nil, context: nil) as? NSDecimalNumber {
-                str = result.stringValue
-                return result
-            } else {
-                print("Error evaluating expression")
+//        func evaluateExpression(_ expression: String) -> Double? {
+//            let mathExpression = NSExpression(format: expression)
+//            
+//            if let result = mathExpression.expressionValue(with: nil, context: nil) as? Double {
+//                str = String(result)
+//                return result
+//            } else {
+//                print("Error evaluating expression")
+//                return nil
+//            }
+//        }
+ 
+
+        func evaluateExpression(_ expression: String) -> Double? {
+            do {
+                let exp = try Expression(expression)
+                return try exp.evaluate()
+            } catch {
+                print("Error evaluating expression: \(error)")
                 return nil
             }
         }
-        
         if let result = evaluateExpression(str) {
             print("Result: \(result)")
-            display.text = result.stringValue
+            str = String(result)
+            display.text = String(result)
         } else {
             print("Failed to evaluate expression")
         }

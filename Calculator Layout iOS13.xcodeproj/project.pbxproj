@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37E3D5C03DB7328C05728985 /* Pods_Calculator_Layout_iOS13.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E23C6EE42C474447987F30A /* Pods_Calculator_Layout_iOS13.framework */; };
 		AD0C513722CA22D500AADC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0C513622CA22D500AADC4D /* AppDelegate.swift */; };
 		AD0C513922CA22D500AADC4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0C513822CA22D500AADC4D /* SceneDelegate.swift */; };
 		AD0C513B22CA22D500AADC4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0C513A22CA22D500AADC4D /* ViewController.swift */; };
@@ -17,7 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AD0C513322CA22D500AADC4D /* Calculator Layout iOS13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calculator Layout iOS13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E23C6EE42C474447987F30A /* Pods_Calculator_Layout_iOS13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calculator_Layout_iOS13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A83481E06B8DA001DB11219C /* Pods-Calculator Layout iOS13.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calculator Layout iOS13.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calculator Layout iOS13/Pods-Calculator Layout iOS13.debug.xcconfig"; sourceTree = "<group>"; };
+		AD0C513322CA22D500AADC4D /* Calculator Layout iOS13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Calculator Layout iOS13.app"; path = "/Users/arhaankhaku/Documents/Development/CS - Swift/iCalc/build/Debug-iphoneos/Calculator Layout iOS13.app"; sourceTree = "<absolute>"; };
 		AD0C513622CA22D500AADC4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD0C513822CA22D500AADC4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AD0C513A22CA22D500AADC4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		AD0C514422CA22D800AADC4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD0C515822CA248600AADC4D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AD0C515A22CA2A7B00AADC4D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B5174DC5500BC1D26BEB8812 /* Pods-Calculator Layout iOS13.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calculator Layout iOS13.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calculator Layout iOS13/Pods-Calculator Layout iOS13.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,27 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37E3D5C03DB7328C05728985 /* Pods_Calculator_Layout_iOS13.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3538D9AB4B7BF081E5440975 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E23C6EE42C474447987F30A /* Pods_Calculator_Layout_iOS13.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C1512E4BFE5CDCF0297D3BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A83481E06B8DA001DB11219C /* Pods-Calculator Layout iOS13.debug.xcconfig */,
+				B5174DC5500BC1D26BEB8812 /* Pods-Calculator Layout iOS13.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AD0C512A22CA22D500AADC4D = {
 			isa = PBXGroup;
 			children = (
 				AD0C515A22CA2A7B00AADC4D /* README.md */,
 				AD0C513522CA22D500AADC4D /* Calculator Layout iOS13 */,
-				AD0C513422CA22D500AADC4D /* Products */,
+				3C1512E4BFE5CDCF0297D3BE /* Pods */,
+				3538D9AB4B7BF081E5440975 /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		AD0C513422CA22D500AADC4D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AD0C513322CA22D500AADC4D /* Calculator Layout iOS13.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		AD0C513522CA22D500AADC4D /* Calculator Layout iOS13 */ = {
@@ -77,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD0C514722CA22D800AADC4D /* Build configuration list for PBXNativeTarget "Calculator Layout iOS13" */;
 			buildPhases = (
+				CEA913BB6D31DA25B22D13FB /* [CP] Check Pods Manifest.lock */,
 				AD0C512F22CA22D500AADC4D /* Sources */,
 				AD0C513022CA22D500AADC4D /* Frameworks */,
 				AD0C513122CA22D500AADC4D /* Resources */,
+				0CE076056695F8E3EA5079C9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -114,7 +131,7 @@
 				Base,
 			);
 			mainGroup = AD0C512A22CA22D500AADC4D;
-			productRefGroup = AD0C513422CA22D500AADC4D /* Products */;
+			productRefGroup = AD0C512A22CA22D500AADC4D;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -136,6 +153,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CE076056695F8E3EA5079C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Calculator Layout iOS13/Pods-Calculator Layout iOS13-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Expression/Expression.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expression.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Calculator Layout iOS13/Pods-Calculator Layout iOS13-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEA913BB6D31DA25B22D13FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Calculator Layout iOS13-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD0C512F22CA22D500AADC4D /* Sources */ = {
@@ -278,6 +334,7 @@
 		};
 		AD0C514822CA22D800AADC4D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A83481E06B8DA001DB11219C /* Pods-Calculator Layout iOS13.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +353,7 @@
 		};
 		AD0C514922CA22D800AADC4D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5174DC5500BC1D26BEB8812 /* Pods-Calculator Layout iOS13.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
