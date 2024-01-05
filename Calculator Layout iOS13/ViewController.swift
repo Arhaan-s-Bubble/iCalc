@@ -41,19 +41,7 @@ class ViewController: UIViewController {
         display.text! += s
     }
     @IBAction func equalTo(_ sender: UIButton) {
-        // Using the Foundation API and NSExpression class
-//        func evaluateExpression(_ expression: String) -> Double? {
-//            let mathExpression = NSExpression(format: expression)
-//            
-//            if let result = mathExpression.expressionValue(with: nil, context: nil) as? Double {
-//                str = String(result)
-//                return result
-//            } else {
-//                print("Error evaluating expression")
-//                return nil
-//            }
-//        }
- 
+        // Using the Expression API
 
         func evaluateExpression(_ expression: String) -> Double? {
             do {
