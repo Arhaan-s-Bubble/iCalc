@@ -4,6 +4,7 @@
 import UIKit
 import Expression
 
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var display: UILabel!
@@ -66,6 +67,12 @@ class ViewController: UIViewController {
         str = ""
         result = 0
         display.text = str
+    }
+    
+    
+    @IBAction func history(_ sender: UIButton) {
+        print("History is clicked")
+        display.text = "Coming Soon "
     }
     
 }

@@ -6,6 +6,7 @@ target 'Calculator Layout iOS13' do
   use_frameworks!
 
   # Pods for Calculator Layout iOS13
-	pod 'Expression', '~> 0.13'
+  pod 'Expression', '~> 0.13'
+  pod 'Firebase/Auth'  # Add this line to include Firebase Authentication
 
 end
