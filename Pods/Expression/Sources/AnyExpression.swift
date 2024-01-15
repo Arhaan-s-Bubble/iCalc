@@ -2,7 +2,7 @@
 //  AnyExpression.swift
 //  Expression
 //
-//  Version 0.13.7
+//  Version 0.13.8
 //
 //  Created by Nick Lockwood on 18/04/2017.
 //  Copyright © 2017 Nick Lockwood. All rights reserved.
@@ -442,7 +442,7 @@ public struct AnyExpression: CustomStringConvertible {
                 } else if case let .array(name) = symbol {
                     if let fn = impureSymbols(.variable(name)) {
                         return { args in
-                            let fn = arrayEvaluator(for: symbol, try fn([]))
+                            let fn = try arrayEvaluator(for: symbol, fn([]))
                             return try box.store(fn(args.map(box.load)))
                         }
                     } else if let fn = pureSymbols(.variable(name)) {
@@ -483,7 +483,7 @@ public struct AnyExpression: CustomStringConvertible {
                         }
                     } else if let fn = pureSymbols(.variable(name)) {
                         do {
-                            if let fn = funcEvaluator(for: symbol, try fn([])) {
+                            if let fn = try funcEvaluator(for: symbol, fn([])) {
                                 return fn
                             }
                         } catch {

@@ -7,9 +7,8 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseAuth
-
-
 
 class RegisterUserViewController: UIViewController {
 
@@ -31,12 +30,12 @@ class RegisterUserViewController: UIViewController {
         guard let email = emailTextField.text else{return}
         guard let password = passwordTextField.text else{return}
         
-        firebase.auth().createUser(withEmail: email, password: password) { firebaseResult, error in
+        Auth.auth().createUser(withEmail: email, password: password) { firebaseResult, error in
             if let e = error {
                 print("error!")
             }else{
 //                Go to our homescreen
-                self.performSegue(withIdentifier: goToMain, sender: <#T##Any?#>)
+                self.shouldPerformSegue(withIdentifier: "goToMain", sender: self)
             }
         }
      

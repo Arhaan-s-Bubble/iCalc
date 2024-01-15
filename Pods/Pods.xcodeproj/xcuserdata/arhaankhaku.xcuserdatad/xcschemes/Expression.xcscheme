@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1510"
+   LastUpgradeVersion = "1500"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9AD068D904DBA66E4FFF242A039DDCB0"
+               BlueprintIdentifier = "15CC9CA8C0A424FEFC3C2A391C1E70B2"
                BuildableName = "Expression.framework"
                BlueprintName = "Expression"
                ReferencedContainer = "container:Pods.xcodeproj">
